@@ -1,0 +1,717 @@
+/* @import url("https://fonts.googleapis.com/css?family=Nova%20Round:700|Nova%20Round:400"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  --primary: #0d6efd;
+  --secondary: #007bff;
+  --accent: #433bff;
+
+  --clockContainerBackGround: #070707;
+  --clockContainerText: white;
+  --clockContainerTitle: var(--primary);
+
+  --projContainerBackGround: #070707;
+  --projCardBackGround: #303030;
+  --projContainerTitleColor: var(--primary);
+  --projCardTitleColor: var(--secondary);
+  --projCardShadow: #222222;
+  --projCardHoverShadow: #3b3b3b;
+  --projListItemBackGround: var(--primary);
+  --projListItemColor: black;
+  --projDescColor: #e3e3e3;
+  --projLinkColor: #c0c0c0;
+  --projLinkColorHover: #8a8a8a;
+
+  --todoContainerBackGround: #070707;
+  --todoListGroupBorder: var(--secondary);
+  --todoListGroupShadow: gray;
+
+  --aboutContainerBackGround: #070707;
+  --aboutContainerColor: #bbbbbb;
+  --aboutProfilePicShadow: rgba(255, 255, 255, 0.1);
+  --aboutProfilePicShadowHover: rgba(255, 255, 255, 0.2);
+  --aboutSocialIconsColor: #b3b3b3;
+  --aboutSocialIconsColorHover: #0077b5;
+  --aboutTitle: #e4e4e4;
+  --aboutText: #d4d4d4;
+  --aboutAccentName: var(--primary);
+  --aboutContactButtonBackGround: #007bff;
+  --aboutContactButtonColor: #fff;
+  --aboutContactButtonHover: #0056b3;
+  --aboutSkillCardBackGround: #484848;
+  --aboutSkillCardText: white;
+  --aboutSkillCardShadow: rgba(255, 255, 255, 0.1);
+  --aboutSkillCardShadowHover: rgba(255, 255, 255, 0.2);
+
+  --cookiesContainerBackGround: white;
+  --cookiesTextColor: black;
+  --cookiesContainerOutline: blue;
+} */
+
+:root[data-theme="light"] {
+  --text: #060611;
+  --background: #f2f2fc;
+  --primary: #0d6efd;
+  --secondary: #007bff;
+  --accent: #433bff;
+
+  --clockContainerBackGround: white;
+  --clockContainerText: black;
+  --clockContainerTitle: var(--primary);
+
+  --projContainerBackGround: #f7f7f7;
+  --projCardBackGround: #fff;
+  --projCardBorder: #ddd;
+  --projContainerTitleColor: var(--primary);
+  --projCardTitleColor: var(--secondary);
+  --projCardShadow: rgba(0, 0, 0, 0.1);
+  --projCardHoverShadow: rgba(0, 0, 0, 0.2);
+  --projListItemBackGround: var(--primary);
+  --projListItemBackHover: var(--accent);
+  --projListItemColor: white;
+  --projDescColor: black;
+  --projLinkColor: #007bff;
+  --projLinkColorHover: #0056b3;
+  --projTitleColor: black;
+  --projDescColor: black;
+
+  --todoContainerBackGround: rgb(255, 255, 255);
+  --todoListGroupBorder: var(--secondary);
+  --todoListGroupShadow: gray;
+
+  --aboutContainerBackGround: #f7f7f7;
+  --aboutContainerColor: #333;
+  --aboutProfilePicShadow: rgba(0, 0, 0, 0.1);
+  --aboutProfilePicShadowHover: rgba(0, 0, 0, 0.2);
+  --aboutSocialIconsColor: #333;
+  --aboutSocialIconsColorHover: #0077b5;
+  --aboutAccentName: var(--primary);
+  --aboutTitle: #222;
+  --aboutText: #555;
+  --aboutContactButtonBackGround: #007bff;
+  --aboutContactButtonColor: #fff;
+  --aboutContactButtonHover: #0056b3;
+  --aboutSkillCardBackGround: #fff;
+  --aboutSkillCardShadow: rgba(0, 0, 0, 0.1);
+  --aboutSkillCardShadowHover: rgba(0, 0, 0, 0.2);
+
+  --expandIcon: url(./assets/keyboard_arrow_down_ligt.svg);
+  --cvConBorder: #222;
+
+  --cookiesContainerBackGround: white;
+  --cookiesTextColor: black;
+  --cookiesContainerOutline: blue;
+
+  --contactConBackGround: #f7f7f7;
+  --contactConColor: white;
+
+  /* Placeholder Image */
+  --c1: #b2b2b2;
+  --c2: #ffffff;
+  --c3: #d9d9d9;
+}
+
+:root[data-theme="dark"] {
+  --primary: #0d6efd;
+  --secondary: #007bff;
+  --accent: #433bff;
+
+  --clockContainerBackGround: #0a0a0a;
+  --clockContainerText: white;
+  --clockContainerTitle: var(--primary);
+
+  --projContainerBackGround: #0c0c0c;
+  --projCardBackGround: #1c1c1c;
+  --projCardBorder: #1f1f1f;
+  --projContainerTitleColor: var(--primary);
+  --projCardTitleColor: var(--secondary);
+  --projCardShadow: rgba(255, 255, 255, 0.1);
+  --projCardHoverShadow: rgba(255, 255, 255, 0.2);
+  --projListItemBackGround: var(--primary);
+  --projListItemBackHover: var(--accent);
+  --projListItemColor: white;
+  --projDescColor: black;
+  --projLinkColor: #007bff;
+  --projLinkColorHover: #0056b3;
+  --projTitleColor: white;
+  --projDescColor: white;
+
+  --todoContainerBackGround: #070707;
+  --todoListGroupBorder: var(--secondary);
+  --todoListGroupShadow: gray;
+
+  --aboutContainerBackGround: #070707;
+  --aboutContainerColor: #bbbbbb;
+  --aboutProfilePicShadow: rgba(255, 255, 255, 0.1);
+  --aboutProfilePicShadowHover: rgba(255, 255, 255, 0.2);
+  --aboutSocialIconsColor: #b3b3b3;
+  --aboutSocialIconsColorHover: #0077b5;
+  --aboutTitle: #e4e4e4;
+  --aboutText: #d4d4d4;
+  --aboutAccentName: var(--primary);
+  --aboutContactButtonBackGround: #007bff;
+  --aboutContactButtonColor: #fff;
+  --aboutContactButtonHover: #0056b3;
+  --aboutSkillCardBackGround: #484848;
+  --aboutSkillCardText: white;
+  --aboutSkillCardShadow: rgba(255, 255, 255, 0.1);
+  --aboutSkillCardShadowHover: rgba(255, 255, 255, 0.2);
+
+  --expandIcon: url(./assets/keyboard_arrow_down_dark.svg);
+  --cvConBorder: #fff;
+
+  --cookiesContainerBackGround: black;
+  --cookiesTextColor: white;
+  --cookiesContainerOutline: var(--primary);
+
+  --contactConBackGround: #070707;
+  --contactConColor: white;
+
+  /* Placeholder Image */
+  --c1: #070707;
+  --c2: #272727;
+  --c3: #575757;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Nova Round", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 50px;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-weight: 400;
+
+  scroll-behavior: smooth;
+
+  position: relative;
+
+  background-color: var(--contactConBackGround);
+}
+
+.titleBar {
+  color: var(--clockContainerTitle);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  z-index: 100;
+
+  backdrop-filter: blur(10px);
+}
+
+.titleBar h2 {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  text-align: center;
+}
+
+.titleBar a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  text-align: center;
+}
+
+.titleBar button {
+  color: var(--primary);
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: x-large;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------------------------------------- */
+
+.clockContainer {
+  background-color: var(--clockContainerBackGround);
+  color: var(--clockContainerText);
+
+  width: 100vw;
+  min-height: var(--win-height);
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  scroll-snap-align: start;
+}
+
+.titleBar h2 {
+  margin: 0;
+}
+
+.clock {
+  width: 100%;
+  margin-top: 50px;
+  height: calc(100% - 50px);
+  /* background-color: red; */
+
+  display: flex;
+  font-weight: bold;
+}
+
+.clockSettings {
+  width: 20%;
+  height: 100%;
+  /* background-color: blue; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clockSettings ul {
+  list-style: none;
+}
+
+.clockSettings li {
+  display: flex;
+}
+
+.clockDisplay {
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+  height: 100%;
+  /* background-color: green; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ----------------------------------------------- */
+
+.projectCon {
+  width: 100%;
+  min-height: var(--win-height);
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: var(--projContainerBackGround);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  /* background-color: red; */
+}
+
+.projDesc p {
+  margin-top: 20px !important;
+}
+
+.projLangs {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  min-height: 40px;
+}
+
+.projLangTag {
+  cursor: pointer;
+}
+
+.projTitle {
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+.projectCard {
+  max-width: 400px;
+  aspect-ratio: 1/1.5;
+  width: 100%;
+  scroll-snap-align: start;
+  /* max-height: 500px !important; */
+}
+
+.projImage {
+  z-index: 1111;
+  opacity: 100 !important;
+}
+
+/* ----------------------------------------------- */
+
+.todoCon {
+  width: 100%;
+  height: var(--win-height);
+  background-color: var(--todoContainerBackGround);
+
+  display: flex;
+  align-items: center;
+}
+
+.list-group {
+  width: 48%;
+  height: 90%;
+  border-radius: 10px;
+  outline: 2px solid var(--todoListGroupBorder);
+  overflow-y: scroll;
+  margin-left: 2%;
+  box-shadow: 5px 5px solid var(--todoListGroupShadow);
+}
+
+.list-group li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control {
+  width: 90% !important;
+}
+
+.input-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------------- */
+.aboutCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 50px;
+  background-color: var(--aboutContainerBackGround);
+  color: var(--aboutContainerColor);
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  min-height: var(--win-height);
+  scroll-snap-align: start;
+}
+
+.profilePicContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profilePic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px var(--aboutProfilePicShadow);
+  background-image: url(assets/pepes.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.profilePic.hovered {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px var(--aboutProfilePicShadowHover);
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.socialIcons a {
+  color: var(--aboutSocialIconsColor);
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
+}
+
+.socialIcons a:hover {
+  color: var(--aboutAccentName);
+}
+
+.aboutText {
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.aboutText h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--aboutTitle);
+}
+
+.aboutText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--aboutText);
+}
+
+.accentName {
+  color: var(--aboutAccentName);
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.contactButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: var(--aboutContactButtonColor);
+  background-color: var(--aboutContactButtonBackGround);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contactButton:hover {
+  background-color: var(--aboutContactButtonHover);
+}
+
+.skillsContainer {
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.skillsContainer h2 {
+  font-size: 2rem;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  color: var(--aboutTitle);
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skillCard {
+  background-color: var(--aboutSkillCardBackGround);
+  color: var(--aboutSkillCardText);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--aboutSkillCardShadow);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.skillCard.hovered {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px;
+}
+
+.skillCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px var(--aboutSkillCardShadowHover);
+}
+
+.aboutText h4 {
+  margin: 0;
+  margin-top: 20px;
+  color: var(--aboutTitle);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconExpandCV {
+  background-image: var(--expandIcon);
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  transform: rotateZ(0deg);
+  transition: 0.3s ease-in-out 0s;
+}
+
+.cvCon {
+  transition: 0.3s ease-in-out 0s;
+  width: 50%;
+  transform-origin: top;
+
+  position: relative;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.cvBorder {
+  height: 100%;
+  width: 100%;
+  border-top: 5px solid var(--cvConBorder);
+  border-right: 5px solid var(--cvConBorder);
+  border-bottom: 5px solid var(--cvConBorder);
+}
+
+.cvPoint {
+  height: 25px;
+  width: 25px;
+  background-color: var(--secondary);
+  cursor: pointer;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.cvPoint:nth-child(2) {
+  top: -10px;
+  right: -10px;
+}
+.cvPoint:nth-child(1) {
+  top: -10px;
+}
+.cvPoint:nth-child(3) {
+  bottom: -10px;
+  right: -10px;
+}
+
+.cvText {
+  width: 200px;
+  height: 120px;
+  position: absolute;
+  right: -250px;
+  top: -15px;
+}
+
+.cvText p {
+  height: 100%;
+  outline: 5px solid var(--secondary);
+  border-radius: 10px;
+}
+
+/* ----------------------------------------------- */
+
+.cookiesCon {
+  height: 200px;
+  max-width: 400px;
+  width: 96%;
+  padding: 10px;
+
+  position: fixed;
+  bottom: 10px;
+  right: 2%;
+  margin-left: 2%;
+
+  background-color: var(--cookiesContainerBackGround);
+  color: var(--cookiesTextColor);
+  border-radius: 10px;
+  outline: 2px solid var(--cookiesContainerOutline);
+
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: ce;
+}
+
+.cookiesCon h5 {
+  font-weight: bolder;
+  margin: 0;
+}
+
+.cookiesCon p {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin: 0;
+}
+
+.btn-group {
+  width: 90%;
+  height: 40px;
+  position: absolute;
+  left: 5%;
+  bottom: 5px;
+}
+
+/* ----------------------------------------------- */
+
+.contactCon {
+  min-height: var(--win-height);
+  background-color: var(--contactConBackGround);
+  color: var(--contactConColor);
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+
+  /* background-color: blue; */
+}
+
+.contactCon h1 {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  z-index: 10;
+  color: var(--primary);
+  font-size: large;
+}
+
+.formsLeftSide,
+.formsRightSide {
+  width: 300px;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  position: relative;
+}
+
+/* .formsLeftSide {
+  background-color: red;
+}
+.formsRightSide {
+  background-color: green;
+} */
+
+.formsRightSide * {
+  width: 95%;
+  max-width: 400px;
+}
+.contactTimeInput {
+  width: 100px;
+}
