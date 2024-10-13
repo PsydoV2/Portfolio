@@ -55,7 +55,7 @@ export const ProjectCon = () => {
       ></ProjectCards>
       <ProjectCards
         title="TastySnap"
-        description="Work in Progress"
+        description="TastySnap is the ultimate app for food lovers—share meal photos, rate dishes and restaurants, discover recipes, and connect with fellow foodies worldwide."
         link="https://tastysnap.org/"
         image={tastysnapProjImage}
         langs={["HTML", "CSS", "TypeScript", "React Native", "React"]}
