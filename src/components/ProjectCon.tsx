@@ -6,6 +6,7 @@ import spacerunnerProjImage from "../assets/ProjImages/spacerunner.png";
 import hackathonweatherProjImage from "../assets/ProjImages/hackathonweather.png";
 import hackatonscansafeProjImage from "../assets/ProjImages/hackathonscansafe.png";
 import hackatonbeforeafterProjImage from "../assets/ProjImages/hackathonBeforeORAfter.png";
+import tastysnapProjImage from "../assets/ProjImages/tastysnap.png";
 
 export const ProjectCon = () => {
   return (
@@ -51,6 +52,13 @@ export const ProjectCon = () => {
         link="https://github.com/PsydoV2/HackathonAufgabe3"
         image={hackatonbeforeafterProjImage}
         langs={["HTML", "CSS", "TypeScript", "React Native"]}
+      ></ProjectCards>
+      <ProjectCards
+        title="TastySnap"
+        description="Work in Progress"
+        link="https://tastysnap.org/"
+        image={tastysnapProjImage}
+        langs={["HTML", "CSS", "TypeScript", "React Native", "React"]}
       ></ProjectCards>
     </div>
   );
