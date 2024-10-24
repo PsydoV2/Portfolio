@@ -7,6 +7,7 @@ import hackathonweatherProjImage from "../assets/ProjImages/hackathonweather.png
 import hackatonscansafeProjImage from "../assets/ProjImages/hackathonscansafe.png";
 import hackatonbeforeafterProjImage from "../assets/ProjImages/hackathonBeforeORAfter.png";
 import tastysnapProjImage from "../assets/ProjImages/tastysnap.png";
+import assemblyProjImage from "../assets/ProjImages/assembly.png";
 
 export const ProjectCon = () => {
   return (
@@ -26,8 +27,8 @@ export const ProjectCon = () => {
         langs={["SHELL", "ROFF"]}
       ></ProjectCards>
       <ProjectCards
-        title="Webgame"
-        description="I just wanted to learn how to do Webgames so i created that simple game."
+        title="Space Runner"
+        description="To explore the world of web game development, I created a simple game as a hands-on learning experience."
         link="https://sfalter.de/WebGames/SpaceRun/"
         image={spacerunnerProjImage}
         langs={["HTML", "CSS", "JS"]}
@@ -55,10 +56,25 @@ export const ProjectCon = () => {
       ></ProjectCards>
       <ProjectCards
         title="TastySnap"
-        description="TastySnap is the ultimate app for food lovers—share meal photos, rate dishes and restaurants, discover recipes, and connect with fellow foodies worldwide."
+        description="TastySnap is the ultimate app for food lovers, share meal photos, rate dishes and restaurants, discover recipes, and connect with fellow foodies worldwide. (Not released yet)"
         link="https://tastysnap.org/"
         image={tastysnapProjImage}
-        langs={["HTML", "CSS", "TypeScript", "React Native", "React"]}
+        langs={[
+          "HTML",
+          "CSS",
+          "TypeScript",
+          "React Native",
+          "React",
+          "NodeJS",
+          "SQL",
+        ]}
+      ></ProjectCards>
+      <ProjectCards
+        title="Assembly"
+        description="This repository features basic programs written in assembly language, driven by my curiosity to understand how low-level programming works. Through these projects, I aimed to deepen my knowledge of computer architecture and the underlying mechanics of programming."
+        link="https://github.com/PsydoV2/Assembly"
+        image={assemblyProjImage}
+        langs={["ASSEMBLY"]}
       ></ProjectCards>
     </div>
   );

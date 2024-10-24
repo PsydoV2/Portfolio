@@ -59,7 +59,7 @@ export const About = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/sebfalter/"
             target="_blank"
             rel="noopener noreferrer"
           >

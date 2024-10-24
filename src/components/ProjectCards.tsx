@@ -9,6 +9,7 @@ import {
   Button,
   Chip,
 } from "@nextui-org/react";
+import { ScrollShadow } from "@nextui-org/react";
 
 interface PropsProjectCards {
   title: string;
@@ -36,6 +37,7 @@ export const ProjectCards = (props: PropsProjectCards) => {
       <Divider />
       <CardBody>
         <h1 className="projTitle"> {props.title} </h1>
+        <br />
         <div className="projLangs">
           {props.langs.map((lang, index) => (
             <Chip
@@ -53,7 +55,10 @@ export const ProjectCards = (props: PropsProjectCards) => {
             </Chip>
           ))}
         </div>
-        <p className="projDesc">{props.description}</p>
+        <br />
+        <ScrollShadow className="w-[350px]">
+          <p className="projDesc">{props.description}</p>
+        </ScrollShadow>
       </CardBody>
       <Divider />
       <CardFooter>
