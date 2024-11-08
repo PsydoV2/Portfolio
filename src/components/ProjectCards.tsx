@@ -36,7 +36,7 @@ export const ProjectCards = (props: PropsProjectCards) => {
       </CardHeader>
       <Divider />
       <CardBody>
-        <h1 className="projTitle"> {props.title} </h1>
+        <h3 className="projTitle"> {props.title} </h3>
         <br />
         <div className="projLangs">
           {props.langs.map((lang, index) => (

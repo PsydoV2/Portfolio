@@ -30,7 +30,7 @@ function App() {
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href =
-      "https://fonts.googleapis.com/css?family=Nova%20Round:700|Nova%20Round:400";
+      "https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap";
     document.head.appendChild(link);
   };
 
