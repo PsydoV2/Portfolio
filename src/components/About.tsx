@@ -2,6 +2,18 @@ import { useState } from "react";
 // import profilePic from "../assets/Profile_avatar_placeholder_large.png";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Switch } from "@nextui-org/react";
+import {
+  FaJava,
+  FaPhp,
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+} from "react-icons/fa6";
+import { TbBrandCSharp, TbBrandReactNative } from "react-icons/tb";
+import { DiMysql } from "react-icons/di";
+import { SiTypescript } from "react-icons/si";
 // import profilePic from "../assets/pepes.webp";
 // import { Button } from "@nextui-org/react";
 // import { CV } from "./CV";
@@ -27,17 +39,17 @@ export const About = () => {
   // ];
 
   const skills = [
-    { name: "Java", color: "#b07219" }, // Java - Braun
-    { name: "C#", color: "#68217A" }, // C# - Lila
-    { name: "SQL", color: "#336791" }, // SQL - Dunkelblau
-    { name: "PHP", color: "#4F5D95" }, // PHP - Dunkelblau
-    { name: "HTML", color: "#e34c26" }, // HTML - Rot
-    { name: "CSS", color: "#264de4" }, // CSS - Blau
-    { name: "JavaScript", color: "#f0db4f" }, // JavaScript - Gelb
-    { name: "TypeScript", color: "#3178c6" }, // TypeScript - Hellblau
-    { name: "React", color: "#61dafb" }, // React - Hellblau
-    { name: "React Native", color: "#61dafb" }, // React Native - Hellblau
-    { name: "Node.js", color: "#3c873a" }, // Node.js - Grün
+    { name: "Java", color: "#b07219", icon: <FaJava /> }, // Java - Braun
+    { name: "C#", color: "#68217A", icon: <TbBrandCSharp /> }, // C# - Lila
+    { name: "SQL", color: "#336791", icon: <DiMysql /> }, // SQL - Dunkelblau
+    { name: "PHP", color: "#4F5D95", icon: <FaPhp /> }, // PHP - Dunkelblau
+    { name: "HTML", color: "#e34c26", icon: <FaHtml5 /> }, // HTML - Rot
+    { name: "CSS", color: "#264de4", icon: <FaCss3 /> }, // CSS - Blau
+    { name: "JavaScript", color: "#f0db4f", icon: <FaJs /> }, // JavaScript - Gelb
+    { name: "TypeScript", color: "#3178c6", icon: <SiTypescript /> }, // TypeScript - Hellblau
+    { name: "React", color: "#61dafb", icon: <FaReact /> }, // React - Hellblau
+    { name: "React Native", color: "#61dafb", icon: <TbBrandReactNative /> }, // React Native - Hellblau
+    { name: "Node.js", color: "#3c873a", icon: <FaNodeJs /> }, // Node.js - Grün
   ];
 
   // const handelCV = () => {
@@ -169,6 +181,7 @@ export const About = () => {
               }
             >
               {skill.name}
+              {skill.icon}
             </div>
           ))}
         </div>

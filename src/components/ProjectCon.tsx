@@ -8,6 +8,7 @@ import hackatonscansafeProjImage from "../assets/ProjImages/hackathonscansafe.pn
 import hackatonbeforeafterProjImage from "../assets/ProjImages/hackathonBeforeORAfter.png";
 import tastysnapProjImage from "../assets/ProjImages/tastysnap.png";
 import assemblyProjImage from "../assets/ProjImages/assembly.png";
+import lifeSpanProj from "../assets/ProjImages/lifeSpanProj.png";
 
 export const ProjectCon = () => {
   return (
@@ -75,6 +76,13 @@ export const ProjectCon = () => {
         link="https://github.com/PsydoV2/Assembly"
         image={assemblyProjImage}
         langs={["ASSEMBLY"]}
+      ></ProjectCards>
+      <ProjectCards
+        title="Lifespan Visualizer"
+        description="Bored during the holidays and inspired by an Instagram creator, I developed a website that visualizes your lifespan. The application uses the average life expectancy of your country of birth to calculate how much time you've already lived and how much you are expected to have left. You can customize the level of detail, choosing to view it in days, weeks, or years."
+        link="https://lifespanvisualizer.sfalter.de/"
+        image={lifeSpanProj}
+        langs={["HTML", "CSS", "TypeScript", "React"]}
       ></ProjectCards>
     </div>
   );

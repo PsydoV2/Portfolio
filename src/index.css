@@ -189,7 +189,6 @@ p {
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
   scroll-padding-top: 50px;
 }
 
@@ -208,6 +207,17 @@ body {
   position: relative;
 
   background-color: var(--contactConBackGround);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--aboutContactButtonBackGround);
+  border-radius: 10px;
+  cursor: s-resize;
 }
 
 .titleBar {
@@ -260,76 +270,14 @@ body {
 
 /* ----------------------------------------------- */
 
-.clockContainer {
-  background-color: var(--clockContainerBackGround);
-  color: var(--clockContainerText);
-
-  width: 100vw;
-  min-height: var(--win-height);
-
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  scroll-snap-align: start;
-}
-
-.titleBar h2 {
-  margin: 0;
-}
-
-.clock {
-  width: 100%;
-  margin-top: 50px;
-  height: calc(100% - 50px);
-  /* background-color: red; */
-
-  display: flex;
-  font-weight: bold;
-}
-
-.clockSettings {
-  width: 20%;
-  height: 100%;
-  /* background-color: blue; */
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.clockSettings ul {
-  list-style: none;
-}
-
-.clockSettings li {
-  display: flex;
-}
-
-.clockDisplay {
-  font-family: "Courier New", Courier, monospace;
-  width: 100%;
-  height: 100%;
-  /* background-color: green; */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* ----------------------------------------------- */
-
 .projectCon {
-  width: 100%;
+  width: 90%;
   min-height: var(--win-height);
   padding-top: 50px;
   padding-bottom: 50px;
+  margin: auto;
 
-  background-color: var(--projContainerBackGround);
+  /* background-color: var(--projContainerBackGround); */
 
   display: flex;
   justify-content: center;
@@ -340,8 +288,12 @@ body {
   /* background-color: red; */
 }
 
-.projDesc p {
-  margin-top: 20px !important;
+.projDesc {
+  margin: 0;
+  width: 100%;
+  overflow-y: scroll;
+  height: 100%;
+  padding-right: 10px;
 }
 
 .projLangs {
@@ -350,7 +302,7 @@ body {
   align-items: center;
   gap: 5px;
   flex-wrap: wrap;
-  min-height: 40px;
+  /* min-height: 40px; */
   font-family: "Doto", sans-serif;
   font-weight: bolder;
 }
@@ -462,11 +414,12 @@ body {
 .socialIcons a {
   color: var(--aboutSocialIconsColor);
   font-size: 24px;
-  transition: color 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .socialIcons a:hover {
   color: var(--aboutAccentName);
+  transform: scale(1.2);
 }
 
 .aboutText {
@@ -536,6 +489,10 @@ body {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
   font-size: 1rem;
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .skillCard.hovered {
