@@ -2,13 +2,14 @@ import { ProjectCards } from "./ProjectCards";
 
 import geisProjImage from "../assets/ProjImages/geisProj.png";
 import bashProjImage from "../assets/ProjImages/bash.png";
-import spacerunnerProjImage from "../assets/ProjImages/spacerunner.png";
+// import spacerunnerProjImage from "../assets/ProjImages/spacerunner.png";
 import hackathonweatherProjImage from "../assets/ProjImages/hackathonweather.png";
 import hackatonscansafeProjImage from "../assets/ProjImages/hackathonscansafe.png";
 import hackatonbeforeafterProjImage from "../assets/ProjImages/hackathonBeforeORAfter.png";
 import tastysnapProjImage from "../assets/ProjImages/tastysnap.png";
 import assemblyProjImage from "../assets/ProjImages/assembly.png";
 import lifeSpanProj from "../assets/ProjImages/lifeSpanProj.png";
+import leanx from "../assets/ProjImages/leanx.png";
 
 export const ProjectCon = () => {
   return (
@@ -27,13 +28,13 @@ export const ProjectCon = () => {
         image={bashProjImage}
         langs={["SHELL", "ROFF"]}
       ></ProjectCards>
-      <ProjectCards
+      {/* <ProjectCards
         title="Space Runner"
         description="To explore the world of web game development, I created a simple game as a hands-on learning experience."
         link="https://sfalter.de/WebGames/SpaceRun/"
         image={spacerunnerProjImage}
         langs={["HTML", "CSS", "JS"]}
-      ></ProjectCards>
+      ></ProjectCards> */}
       <ProjectCards
         title="WeatherApp"
         description="As part of a hackathon, the first challenge was to create something about weather using the Open Meteo API, which is why I developed a classic weather forecast app with react native."
@@ -83,6 +84,13 @@ export const ProjectCon = () => {
         link="https://lifespanvisualizer.sfalter.de/"
         image={lifeSpanProj}
         langs={["HTML", "CSS", "TypeScript", "React"]}
+      ></ProjectCards>
+      <ProjectCards
+        title="LeanX"
+        description="LeanX is your smart riding companion, designed to track and analyze your motorcycle's lean angle in real time. With precise sensor calibration, live tilt display, and ride history logging, LeanX helps you master every curve with confidence."
+        link="https://leanx.sfalter.de/"
+        image={leanx}
+        langs={["HTML", "CSS", "TypeScript", "React", "React Native"]}
       ></ProjectCards>
     </div>
   );

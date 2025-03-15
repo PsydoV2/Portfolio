@@ -175,7 +175,7 @@ export const About = () => {
               }
               onClick={() =>
                 window.open(
-                  `https://www.google.com/search?q=${skill}`,
+                  `https://www.google.com/search?q=${skill.name}`,
                   "_blank"
                 )
               }
