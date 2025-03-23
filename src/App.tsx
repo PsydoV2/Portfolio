@@ -11,12 +11,12 @@ import { useState } from "react";
 
 function App() {
   const [choice, setChoice] = useState<string | null>(
-    sessionStorage.getItem("cookiesChoice")
+    localStorage.getItem("cookiesChoice")
   );
 
   const handelClick = (choice: string) => {
     setChoice(choice);
-    sessionStorage.setItem("cookiesChoice", choice);
+    localStorage.setItem("cookiesChoice", choice);
     checkValue();
   };
 
