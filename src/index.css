@@ -62,7 +62,7 @@
   --clockContainerText: black;
   --clockContainerTitle: var(--primary);
 
-  --projContainerBackGround: #f7f7f7;
+  --projContainerBackGround: #ececec;
   --projCardBackGround: #fff;
   --projCardBorder: #ddd;
   --projContainerTitleColor: var(--primary);
@@ -115,6 +115,7 @@
 }
 
 :root[data-theme="dark"] {
+  --text: #e7e7e7;
   --primary: #0d6efd;
   --secondary: #007bff;
   --accent: #433bff;
@@ -617,55 +618,118 @@ body {
 
 /* ----------------------------------------------- */
 
-.contactCon {
-  min-height: var(--win-height);
-  background-color: var(--contactConBackGround);
-  color: var(--contactConColor);
-  width: 100%;
-  scroll-snap-align: start;
+.contactContainer {
+  max-width: 900px;
+  min-width: 400px;
+  width: 90%;
+  margin: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  position: relative;
-
-  /* background-color: blue; */
+  margin-bottom: 50px;
+  margin-top: 50px;
+  outline: 4px solid var(--projContainerBackGround);
+  padding: 0px;
+  border-radius: 10px;
 }
 
-.contactCon h1 {
-  position: absolute;
-  top: -40px;
-  left: 10px;
-  z-index: 10;
-  color: var(--primary);
+.leftSideContact,
+.rightSideContact {
+  width: 50%;
+  min-width: 400px;
+  padding: 20px;
+  height: 500px;
+}
+
+.rightSideContact {
+  background-color: var(--projContainerBackGround);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rightSideContact .input {
+  width: 100%;
+}
+
+.leftSideContact h1 {
+  color: var(--aboutTitle);
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+.leftSideContact h2 {
+  color: var(--aboutTitle);
   font-size: large;
+  margin-top: 30px;
 }
 
-.formsLeftSide,
-.formsRightSide {
-  width: 300px;
-  height: fit-content;
+.leftSideContact span {
+  color: var(--aboutText);
+  font-size: small;
+}
+
+.leftSideContact p {
+  line-height: 25px;
+  color: var(--aboutText);
+  margin-bottom: 10px;
+}
+
+.leftSideContact ul {
+  margin-top: 20px;
+}
+
+.leftSideContact li {
+  margin-bottom: 10px;
+}
+
+.leftSideContact li a {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  color: var(--aboutText);
+}
+
+.leftSideContact li a:hover {
+  cursor: pointer;
+  color: var(--aboutContactButtonBackGround);
+}
+
+.leftSideContact .icon {
+  color: var(--aboutContactButtonBackGround);
+  font-size: larger;
+}
+
+@media (max-width: 900px) {
+  .leftSideContact,
+  .rightSideContact {
+    width: 100%;
+  }
+}
+
+/* ----------------------------------------------- */
+
+.footer {
+  --mask: radial-gradient(67.08px at 50% 90px, #000 99%, #0000 101%)
+      calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px, #0000 99%, #000 101%) 50% 30px/120px
+      100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  height: 200px;
+  width: 100%;
+  background-color: var(--projContainerBackGround);
 
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-
-  position: relative;
+  align-items: end;
+  padding-bottom: 20px;
 }
 
-/* .formsLeftSide {
-  background-color: red;
-}
-.formsRightSide {
-  background-color: green;
-} */
-
-.formsRightSide * {
-  width: 95%;
-  max-width: 400px;
-}
-.contactTimeInput {
-  width: 100px;
+.footer p {
+  color: var(--text);
 }

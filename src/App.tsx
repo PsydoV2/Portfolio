@@ -3,8 +3,8 @@ import { TitleBar } from "./components/TitleBar";
 // import { ToDoList } from "./components/ToDoList";
 import { About } from "./components/About";
 import { Cookies } from "./components/Cookies";
-// import { Contact } from "./components/Contact";
-
+import { Contact } from "./components/Contact";
+import Footer from "./components/Footer";
 import { ProjectCon } from "./components/ProjectCon";
 
 import { useState } from "react";
@@ -47,12 +47,10 @@ function App() {
       )}
 
       <TitleBar></TitleBar>
-
       <About></About>
-
       <ProjectCon></ProjectCon>
-
-      {/* <Contact></Contact> */}
+      <Contact></Contact>
+      <Footer></Footer>
     </>
   );
 }

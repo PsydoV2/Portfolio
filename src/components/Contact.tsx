@@ -1,91 +1,64 @@
-import React from "react";
-import {
-  Calendar,
-  TimeInput,
-  Input,
-  Textarea,
-  Button,
-} from "@nextui-org/react";
-import type { DateValue } from "@react-types/calendar";
-import { today, getLocalTimeZone, isWeekend } from "@internationalized/date";
-import { useLocale } from "@react-aria/i18n";
-import { parseDate } from "@internationalized/date";
-import { Time } from "@internationalized/date";
+import { Input, Textarea } from "@heroui/input";
+import { Button } from "@heroui/button";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const Contact = () => {
-  const [date, setDate] = React.useState<DateValue>(today(getLocalTimeZone()));
-  const { locale } = useLocale();
-  const isInvalidWeekend = isWeekend(date, locale);
-
-  const [value, setValue] = React.useState("");
-
-  const validateEmail = (value: string) =>
-    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
-
-  const isInvalid = React.useMemo(() => {
-    if (value === "") return false;
-
-    return validateEmail(value) ? false : true;
-  }, [value]);
-
   return (
-    <div className="contactCon">
-      <div className="formsLeftSide">
-        <h1>Come in touch with me</h1>
-        <Calendar
-          aria-label="Date (Uncontrolled)"
-          defaultValue={parseDate("2024-06-13")}
-          showMonthAndYearPickers
-          errorMessage={
-            isInvalidWeekend ? "Not available on weekends!" : undefined
-          }
-          isInvalid={isInvalidWeekend}
-          value={date}
-          onChange={setDate}
-        />
+    <div className="contactContainer">
+      <div className="leftSideContact">
+        <h1>Let's Connect</h1>
+        <p>
+          Whether you have a project in mind, a collaboration opportunity, or
+          just want to say hello — I’d love to hear from you. I’m always open to
+          discussing new ideas, exploring creative solutions, or simply chatting
+          about design and development.
+        </p>
+
+        <p>
+          Feel free to reach out using the contact form on the right. I do my
+          best to respond as quickly as possible.
+        </p>
+
+        <h2>Prefer other ways to connect?</h2>
+        <span>Check out the links below:</span>
+
+        <ul>
+          <li>
+            <a href="/assets/CV.pdf" target="_blank">
+              <FaInstagram className="icon" /> Send me a DM on Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/sebfalter/" target="_blank">
+              <FaLinkedin className="icon" /> Connect on LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/PsydoV2" target="_blank">
+              <FaGithub className="icon" /> Browse My GitHub Projects
+            </a>
+          </li>
+        </ul>
       </div>
-      <div className="formsRightSide">
-        <TimeInput
-          isRequired
-          label="Meeting Time"
-          hourCycle={24}
-          minValue={new Time(17)}
-          maxValue={new Time(21)}
-          defaultValue={new Time(17, 0)}
-          className="contactTimeInput"
-          errorMessage={null}
-          labelPlacement="outside"
-        />
+      <div className="rightSideContact">
+        <Input isRequired className="input" label="Name" type="text" />
+        <Input isRequired className="input" label="Email" type="email" />
         <Input
-          type="email"
-          label="Email"
-          placeholder="Enter your email"
-          variant="bordered"
-          isInvalid={isInvalid}
-          onValueChange={setValue}
-          color={isInvalid ? "danger" : "success"}
-          errorMessage="Please enter a valid email"
-          className="max-w-xs"
           isRequired
-          isClearable
-        />
-        <Input
+          className="input"
+          label="Subject"
           type="text"
-          label="Name"
-          placeholder="Enter your name"
-          variant="bordered"
-          className="max-w-xs"
-          isRequired
-          isClearable
+          labelPlacement="inside"
         />
         <Textarea
-          label="Reason"
-          placeholder="Enter your reason for the meeting"
-          className="max-w-xs"
           isRequired
+          className="input"
+          label="Message"
+          labelPlacement="inside"
+          placeholder="Type your message here..."
         />
-        <Button color="primary" className="contactSendButton">
-          Send request
+        <Button color="primary" variant="ghost" className="input">
+          Send Message
         </Button>
       </div>
     </div>
