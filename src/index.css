@@ -628,7 +628,7 @@ body {
   flex-wrap: wrap;
   margin-bottom: 50px;
   margin-top: 50px;
-  outline: 4px solid var(--projContainerBackGround);
+  outline: 4px solid var(--projCardBackGround);
   padding: 0px;
   border-radius: 10px;
 }
@@ -642,7 +642,7 @@ body {
 }
 
 .rightSideContact {
-  background-color: var(--projContainerBackGround);
+  /* background-color: var(--projCardBackGround); */
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -652,6 +652,7 @@ body {
 
 .rightSideContact .input {
   width: 100%;
+  border-radius: 13px;
 }
 
 .leftSideContact h1 {
@@ -722,7 +723,7 @@ body {
   mask: var(--mask);
   height: 200px;
   width: 100%;
-  background-color: var(--projContainerBackGround);
+  background-color: var(--projCardBackGround);
 
   display: flex;
   justify-content: center;

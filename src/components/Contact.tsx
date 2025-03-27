@@ -1,21 +1,8 @@
 import { Input, Textarea } from "@heroui/input";
 import { Button } from "@heroui/button";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { useState } from "react";
 
 export const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handelSendEmail = () => {
-    console.log(name);
-    console.log(email);
-    console.log(subject);
-    console.log(message);
-  };
-
   return (
     <div className="contactContainer">
       <div className="leftSideContact">
@@ -53,28 +40,19 @@ export const Contact = () => {
           </li>
         </ul>
       </div>
-      <div className="rightSideContact">
-        <Input
-          isRequired
-          className="input"
-          label="Name"
-          type="text"
-          onChange={(event) => setName(event.target.value)}
-        />
-        <Input
-          isRequired
-          className="input"
-          label="Email"
-          type="email"
-          onChange={(event) => setEmail(event.target.value)}
-        />
+      <form
+        className="rightSideContact"
+        action="https://formsubmit.co/seb.falter@gmail.com"
+        method="POST"
+      >
+        <Input isRequired className="input" label="Name" type="text" />
+        <Input isRequired className="input" label="Email" type="email" />
         <Input
           isRequired
           className="input"
           label="Subject"
           type="text"
           labelPlacement="inside"
-          onChange={(event) => setSubject(event.target.value)}
         />
         <Textarea
           isRequired
@@ -82,18 +60,11 @@ export const Contact = () => {
           label="Message"
           labelPlacement="inside"
           placeholder="Type your message here..."
-          onChange={(event) => setMessage(event.target.value)}
         />
-        <Button
-          color="primary"
-          variant="ghost"
-          className="input"
-          onPress={handelSendEmail}
-          isDisabled
-        >
+        <Button color="primary" variant="ghost" className="input" type="submit">
           Send Message
         </Button>
-      </div>
+      </form>
     </div>
   );
 };
