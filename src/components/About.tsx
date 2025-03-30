@@ -12,8 +12,15 @@ import {
   FaNodeJs,
 } from "react-icons/fa6";
 import { TbBrandCSharp, TbBrandReactNative } from "react-icons/tb";
-import { DiMysql } from "react-icons/di";
-import { SiTypescript } from "react-icons/si";
+import {
+  SiTypescript,
+  SiElectron,
+  SiMariadbfoundation,
+  SiExpo,
+  SiPython,
+} from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { TbSql } from "react-icons/tb";
 // import profilePic from "../assets/pepes.webp";
 // import { Button } from "@nextui-org/react";
 // import { CV } from "./CV";
@@ -24,32 +31,62 @@ export const About = () => {
   const [buzzwordsActiv, togglebuzzwordsActive] = useState(true);
   // const [showCV, toggleCV] = useState(false);
 
-  // const skills = [
-  //   "Java",
-  //   "C#",
-  //   "SQL",
-  //   "PHP",
-  //   "HTML",
-  //   "CSS",
-  //   "JavaScript",
-  //   "TypeScript",
-  //   "React",
-  //   "React Native",
-  //   "Node.js",
-  // ];
-
   const skills = [
-    { name: "Java", color: "#b07219", icon: <FaJava /> }, // Java - Braun
-    { name: "C#", color: "#68217A", icon: <TbBrandCSharp /> }, // C# - Lila
-    { name: "SQL", color: "#336791", icon: <DiMysql /> }, // SQL - Dunkelblau
-    { name: "PHP", color: "#4F5D95", icon: <FaPhp /> }, // PHP - Dunkelblau
-    { name: "HTML", color: "#e34c26", icon: <FaHtml5 /> }, // HTML - Rot
-    { name: "CSS", color: "#264de4", icon: <FaCss3 /> }, // CSS - Blau
-    { name: "JavaScript", color: "#f0db4f", icon: <FaJs /> }, // JavaScript - Gelb
-    { name: "TypeScript", color: "#3178c6", icon: <SiTypescript /> }, // TypeScript - Hellblau
-    { name: "React", color: "#61dafb", icon: <FaReact /> }, // React - Hellblau
-    { name: "React Native", color: "#61dafb", icon: <TbBrandReactNative /> }, // React Native - Hellblau
-    { name: "Node.js", color: "#3c873a", icon: <FaNodeJs /> }, // Node.js - Grün
+    // Backend-Sprachen
+    { name: "Java", color: "#de8e2f", icon: <FaJava />, fontColor: "#fff" },
+    {
+      name: "C#",
+      color: "#67217a",
+      icon: <TbBrandCSharp />,
+      fontColor: "#fff",
+    },
+    { name: "PHP", color: "#777cb4", icon: <FaPhp />, fontColor: "#fff" },
+    { name: "Python", color: "#336d9c", icon: <SiPython />, fontColor: "#fff" },
+
+    // Datenbanken
+    { name: "MySQL", color: "#f29208", icon: <GrMysql />, fontColor: "#fff" },
+    {
+      name: "MariaDB",
+      color: "#394669",
+      icon: <SiMariadbfoundation />,
+      fontColor: "#fff",
+    },
+    { name: "SQL", color: "#336791", icon: <TbSql />, fontColor: "#fff" },
+
+    // Web (Frontend)
+    { name: "HTML", color: "#e4542d", icon: <FaHtml5 />, fontColor: "#fff" },
+    { name: "CSS", color: "#6b399c", icon: <FaCss3 />, fontColor: "#fff" },
+    { name: "JavaScript", color: "#f8e026", icon: <FaJs />, fontColor: "#000" },
+    {
+      name: "TypeScript",
+      color: "#2f74c1",
+      icon: <SiTypescript />,
+      fontColor: "#fff",
+    },
+
+    // Frameworks & Libraries
+    { name: "React", color: "#57c4db", icon: <FaReact />, fontColor: "#000" },
+    {
+      name: "React Native",
+      color: "#57c4db",
+      icon: <TbBrandReactNative />,
+      fontColor: "#000",
+    },
+    { name: "Expo", color: "#1877b9", icon: <SiExpo />, fontColor: "#fff" },
+
+    // Backend/Fullstack Tools
+    {
+      name: "Node.js",
+      color: "#417e38",
+      icon: <FaNodeJs />,
+      fontColor: "#fff",
+    },
+    {
+      name: "Electron",
+      color: "#9eeaf8",
+      icon: <SiElectron />,
+      fontColor: "#000",
+    },
   ];
 
   // const handelCV = () => {
@@ -109,14 +146,16 @@ export const About = () => {
         <br />
         <div style={buzzwordsActiv == false ? { display: "none" } : {}}>
           <p>
-            Hi, I'm <span className="accentAboutMe"> Sebastian Falter</span>, a
-            passionate web developer with a love for creating dynamic and
-            beautiful web applications. With a strong foundation in HTML, CSS,
-            JavaScript, and growing expertise in React with TypeScript, I enjoy
-            bringing ideas to life in the browser. I also build mobile apps
-            using React Native with TypeScript, expanding my reach to versatile,
-            cross-platform projects. I'm currently completing an apprenticeship
-            as a{" "}
+            Hi, I'm <span className="accentAboutMe">Sebastian Falter</span>, a
+            passionate full-stack developer with a love for clean code, smooth
+            user experiences, and smart solutions. I specialize in building
+            responsive and dynamic web and mobile applications using
+            technologies like React, TypeScript, and React Native. With tools
+            like Expo and Electron, I’m able to create cross-platform
+            experiences — from mobile devices to desktop environments.
+          </p>
+          <p>
+            I'm currently completing my apprenticeship as a{" "}
             <a
               className="accentAboutMe"
               href="https://www.google.com/search?q=Fachinformatiker+f%C3%BCr+Anwendungsentwicklung"
@@ -124,22 +163,34 @@ export const About = () => {
             >
               Fachinformatiker für Anwendungsentwicklung
             </a>{" "}
-            (Software Developer) at 1&1. Alongside my skills in Java, PHP, and
-            C#, I have experience working with APIs and backend frameworks like
-            Node.js.
+            (Software Developer) at 1&1, where I work with modern enterprise
+            technologies such as C#, ASP.NET, REST and SOAP APIs. Whether I’m
+            maintaining current systems, developing new services, or modernizing
+            legacy tools, I enjoy solving real-world problems with reliable
+            backend logic and clean architecture.
           </p>
           <p>
-            Beyond coding, I enjoy exploring new technologies, motorcycle
-            riding, 3D modeling, and playing video games. I'm always excited to
-            take on new challenges and work on innovative projects.
+            My stack also includes Java, PHP, and Node.js, and I’m always eager
+            to explore new technologies and frameworks. I enjoy combining my
+            technical knowledge with creativity – be it through 3D modeling,
+            tinkering with mobile sensors, or crafting custom tooling to enhance
+            productivity. In my spare time, you'll likely find me riding
+            motorcycles, experimenting with side projects, or diving into video
+            games. I'm always excited to grow, learn, and build something
+            meaningful.
           </p>
         </div>
         <div style={buzzwordsActiv == true ? { display: "none" } : {}}>
           <p>
-            Hi, I'm <span className="accentAboutMe"> Sebastian Falter</span>, a
-            web developer with a focus on building web and mobile applications.
-            I work with HTML, CSS, JavaScript, React, and TypeScript, and I also
-            create mobile apps using React Native. Currently, I’m training as a{" "}
+            Hi, I'm <span className="accentAboutMe">Sebastian Falter</span>, a
+            developer working on web and mobile apps using React, TypeScript,
+            and React Native. I use Expo for cross-platform development and
+            occasionally work on desktop applications using Electron. I enjoy
+            writing clean, understandable code and turning ideas into working
+            interfaces.
+          </p>
+          <p>
+            I’m currently doing an apprenticeship as a{" "}
             <a
               className="accentAboutMe"
               href="https://www.google.com/search?q=Fachinformatiker+f%C3%BCr+Anwendungsentwicklung"
@@ -147,13 +198,16 @@ export const About = () => {
             >
               Fachinformatiker für Anwendungsentwicklung
             </a>{" "}
-            (Software Developer) at 1&1 and have experience with Java, PHP, C#,
-            and Node.js.
+            (Software Developer) at 1&1. There, I mainly work with C#, ASP.NET,
+            and REST and SOAP APIs. The projects range from backend APIs to
+            internal web tools used in real production environments.. I also
+            have experience with Java, PHP, SQL, and Node.js from various
+            private and team-based projects.
           </p>
           <p>
-            In my free time, I like to explore new tech, ride motorcycles, do 3D
-            modeling, and play video games. I'm always eager to take on new
-            projects and challenges.
+            I also enjoy 3D modeling, gaming, and motorcycle riding. I’m always
+            up for learning new things and building tools that are both useful
+            and fun.
           </p>
         </div>
       </div>
@@ -170,7 +224,7 @@ export const About = () => {
               onMouseLeave={() => setHoveredSkill(null)}
               style={
                 hoveredSkill == skill.name
-                  ? { backgroundColor: skill.color }
+                  ? { backgroundColor: skill.color, color: skill.fontColor }
                   : {}
               }
               onClick={() =>
@@ -180,8 +234,8 @@ export const About = () => {
                 )
               }
             >
-              {skill.name}
               {skill.icon}
+              <span>{skill.name}</span>
             </div>
           ))}
         </div>

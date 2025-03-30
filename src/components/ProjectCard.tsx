@@ -11,7 +11,7 @@ import {
 } from "@nextui-org/react";
 // import { ScrollShadow } from "@nextui-org/react";
 
-interface PropsProjectCards {
+interface PropsProjectCard {
   title: string;
   description: string;
   image: string;
@@ -19,7 +19,7 @@ interface PropsProjectCards {
   langs: string[];
 }
 
-export const ProjectCards = (props: PropsProjectCards) => {
+export const ProjectCards = (props: PropsProjectCard) => {
   return (
     <Card className="projectCard">
       <CardHeader>

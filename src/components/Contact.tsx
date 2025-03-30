@@ -1,6 +1,7 @@
 import { Input, Textarea } from "@heroui/input";
 import { Button } from "@heroui/button";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { MdAlternateEmail } from "react-icons/md";
 
 export const Contact = () => {
   return (
@@ -36,6 +37,11 @@ export const Contact = () => {
           <li>
             <a href="https://github.com/PsydoV2" target="_blank">
               <FaGithub className="icon" /> Browse My GitHub Projects
+            </a>
+          </li>
+          <li>
+            <a href="mailto:seb.falter@gmail.com" target="_blank">
+              <MdAlternateEmail className="icon" /> seb.falter@gmail.com
             </a>
           </li>
         </ul>

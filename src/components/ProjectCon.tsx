@@ -1,4 +1,4 @@
-import { ProjectCards } from "./ProjectCards";
+import { ProjectCards } from "./ProjectCard";
 
 import geisProjImage from "../assets/ProjImages/geisProj.png";
 import bashProjImage from "../assets/ProjImages/bash.png";
