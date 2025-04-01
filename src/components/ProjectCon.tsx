@@ -11,6 +11,7 @@ import assemblyProjImage from "../assets/ProjImages/assembly.png";
 import lifeSpanProj from "../assets/ProjImages/lifeSpanProj.png";
 import leanx from "../assets/ProjImages/leanx.png";
 import expoTemplateImg from "../assets/ProjImages/ExpoTemplate.png";
+import trafficDensityChangerImg from "../assets/ProjImages/trafficdensitychanger.png";
 
 export const ProjectCon = () => {
   return (
@@ -50,6 +51,13 @@ export const ProjectCon = () => {
         image={hackatonscansafeProjImage}
         langs={["HTML", "CSS", "TypeScript", "React Native"]}
       ></ProjectCards> */}
+      <ProjectCards
+        title="Traffic Density Changer"
+        description="An Electron-based desktop app that allows players of Euro Truck Simulator 2 and American Truck Simulator to easily adjust the in-game traffic and pedestrian density settings without editing config files manually."
+        link="https://github.com/PsydoV2/DensityChanger"
+        image={trafficDensityChangerImg}
+        langs={["HTML", "CSS", "TypeScript", "React", "Electron"]}
+      ></ProjectCards>
       <ProjectCards
         title="Before or After"
         description="As part of a hackathon, the third challenge was to build something using the Open Movie Database API. That's why I developed an app inspired by the Higher Lower Game, in which you have to decide whether a film was released before or after the specified film."
