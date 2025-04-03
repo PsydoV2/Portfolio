@@ -5,7 +5,7 @@ import bashProjImage from "../assets/ProjImages/bash.png";
 // import spacerunnerProjImage from "../assets/ProjImages/spacerunner.png";
 // import hackathonweatherProjImage from "../assets/ProjImages/hackathonweather.png";
 // import hackatonscansafeProjImage from "../assets/ProjImages/hackathonscansafe.png";
-import hackatonbeforeafterProjImage from "../assets/ProjImages/hackathonBeforeORAfter.png";
+import beforeOrAfterProjImage from "../assets/ProjImages/beforeorafter.png";
 import tastysnapProjImage from "../assets/ProjImages/tastysnap.png";
 import assemblyProjImage from "../assets/ProjImages/assembly.png";
 import lifeSpanProj from "../assets/ProjImages/lifeSpanProj.png";
@@ -60,9 +60,9 @@ export const ProjectCon = () => {
       ></ProjectCards>
       <ProjectCards
         title="Before or After"
-        description="As part of a hackathon, the third challenge was to build something using the Open Movie Database API. That's why I developed an app inspired by the Higher Lower Game, in which you have to decide whether a film was released before or after the specified film."
+        description="BeforeOrAfter is a simple and addictive movie quiz app built with Expo. The goal is to guess whether a movie was released before or after another one. It’s perfect for movie lovers who want to test or expand their film knowledge in a fun way."
         link="https://github.com/PsydoV2/HackathonAufgabe3"
-        image={hackatonbeforeafterProjImage}
+        image={beforeOrAfterProjImage}
         langs={["HTML", "CSS", "TypeScript", "React Native"]}
       ></ProjectCards>
       <ProjectCards
